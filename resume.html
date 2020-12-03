@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca's resume</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(226, 159, 182);
+            overflow-x: hidden;
+        }
+        .header{
+            background-color: palevioletred;
+            padding: 20px;
+            color: white;
+            margin: 0 auto;
+            height: 470px;
+            width: 90%;
+            position: relative;
+            border: rgba(226, 112, 150, 0.815) 10px solid;
+        }
+        .ttext{
+            background-color: rgb(199, 122, 148);
+            padding: 20px;
+            color: white;
+            margin: 0 auto;
+            width: 90%;
+            z-index: -1;
+        }
+        .s2{
+            background-color: palevioletred;
+            padding: 20px;
+            color: white;
+            margin: 0 auto;
+            width: 90%;
+            height: 500PX;
+            position: relative;
+        }
+        .dp1{
+            width: 270px;
+            height: 270px;
+            border-radius: 50ch;
+            transition: all .5s ease-out;
+            opacity: 0.95;
+        }
+        .dp1:hover{
+            width: 300px;
+            height: 300px;
+            opacity: 1;
+        }
+        .quote{
+            font-size: 35px;
+        }
+        .d3{
+            margin-top: 30px;
+            background-color: rgb(236, 134, 168);
+            padding: 1px 30px;
+            border-radius: 10px;
+            border: 5px solid rgba(226, 112, 150, 0.815);
+        }
+        .d1{  
+            position: absolute;
+        }
+        #hd1{
+            top: 6%;
+            left: 15%;
+            text-align: center;
+        }
+        #hd2{
+            top: 8%;
+            right: 25%;
+            text-align: left;
+        }
+        .icon{
+            width: 42px;
+            height: 42px;
+        }
+        .dicon{
+            margin-top: 80px;
+        }
+        .instagram,.facebook{
+            margin-top: 5px;
+            position: relative;
+            width: 160px;
+            height: 45px;
+            background-color: rgb(236, 134, 168);
+            border-radius: 50px;
+        }
+        .ig-link,.fb-link{
+            position: absolute;
+            top: 1px;
+            left: 3px;
+        }
+        .ig-text{
+            position: absolute;
+            top: -13px;
+            right: 18px;
+            font-size: 22px;
+        }
+        .fb-text{
+            position: absolute;
+            top: -7px;
+            right: 12px;
+            font-size: 20px;
+        }
+        a{
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(209, 77, 121);
+        }
+        /*header*/
+        .text{
+            margin-top: 10%;
+            text-align: center;
+            width: 300px;
+            background-color: rgb(236, 134, 168);
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        .s2text{
+            text-align: center;
+            width: 300px;
+            background-color: rgb(236, 134, 168);
+            border-radius: 10px;
+            font-size: 20px;
+            margin-left: 5%;
+        }
+        .s1con{
+            position: relative;
+            display: flex; 
+            width: 90%;
+            justify-content:space-around;
+            margin: 0 auto;
+            background-color:rgb(218, 124, 155);
+        }
+        .s1con .card{
+            position: relative;
+            width: 200px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        .cir{
+            position: relative;
+            height: 130px;
+            width: 130px;
+            border-radius:50% ;
+            background:  rgb(236, 134, 168);
+        }
+        .cir .word{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .cir .word h2 {
+            font-weight: 700;
+            font-size: 30px;
+            color: #777;
+            transition: 0.5s;
+        }
+        .card:hover .cir .word h2{ 
+            color: #fff;
+            font-size: 40px;
+        }
+        svg{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            z-index: 999;
+        }
+        svg circle{
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke:rgb(226, 114, 114);
+            stroke-width: 10;
+            stroke-linecap: round;
+            transform: translate(5px,5px);
+        }
+        svg circle:nth-child(2){ 
+            stroke-dasharray:380;
+            transition: 0.5s;
+        }       
+        .card:nth-child(1) svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380 * 78) / 100);
+            stroke:brown; 
+        }
+        .card:hover:nth-child(1) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 78) / 100);
+            stroke:brown; 
+        }
+        .card:nth-child(2) svg circle:nth-child(2){
+            stroke-dasharray: 380;
+            stroke-dashoffset: calc(380 - (380 * 83) / 100);
+            stroke:brown; 
+        }
+        .card:hover:nth-child(2) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 83) / 100);
+            stroke:brown; 
+        }
+        .card:nth-child(3) svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380 * 90) / 100);
+            stroke:brown;
+        }
+        .card:hover:nth-child(3) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 90) / 100);
+            stroke:brown;
+        }
+        .card:nth-child(4) svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380 * 85) / 100);
+            stroke:brown;
+        }
+        .card:hover:nth-child(4) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 85) / 100);
+            stroke:brown;
+        }
+        .card:nth-child(5) svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380 * 60) / 100);
+            stroke:brown;
+        }
+        .card:hover:nth-child(5) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 60) / 100);
+            stroke:brown;
+        }
+        .card:nth-child(6) svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380 * 75) / 100);
+            stroke:brown;
+        }
+        .card:hover:nth-child(6) svg circle:nth-child(2){
+            stroke-dashoffset: calc(-380 + (380 * 75) / 100);
+            stroke:brown;
+        }
+        .tags {
+            position: relative;
+            font-size: 20px;
+        }
+        .tags:hover:after {
+            background: rgb(230, 97, 137);
+            border-radius: 10px;
+            color: #fff;
+            content: attr(ishow);
+            left: 30%;
+            bottom: 80%;
+            padding: 5px 15px;
+            position: absolute;
+            z-index: 1000;
+            width: 200px;
+            height: auto;
+            opacity: 0.6;
+        }
+        .s2left{
+            position: absolute;
+            width: 30%;
+        }
+        .s2center{
+            position: absolute;
+            width: 30%;
+            left: 33%;
+        }
+        .s2right{
+            position: absolute;
+            width: 30%;
+            left: 70%;
+        }
+        .bar {
+            margin-top: -10px;
+            margin-left: 20px;
+            width: 100%;
+        }
+
+        .skills {
+            text-align:  right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .r,.c,.j,.p,.h{
+            background-color: rgba(165, 42, 42, 0.788);
+            position: relative;
+            animation-timing-function: ease-in-out;
+        }
+        .r {animation: move1 5s 3;
+            width: 90%
+        }
+        .c {animation: move2 5s 3;
+            width: 70%
+        }
+        .j {animation: move3 5s 3;
+            width: 80%
+        }
+        .p {animation: move4 5s 3;
+            width: 70%
+        }
+        .h {animation: move5 5s 3;
+            width: 60%
+        }
+        
+        @keyframes move1 {
+            from {width: 0%;;}
+            to {width: 90%;;}
+        }
+        @keyframes move2 {
+            from {width: 0%;;}
+            to {width: 70%;;}
+        }
+        @keyframes move3 {
+            from {width: 0%;;}
+            to {width: 80%;;}
+        }
+        @keyframes move4 {
+            from {width: 0%;;}
+            to {width: 70%;;}
+        }
+        @keyframes move5 {
+            from {width: 0%;;}
+            to {width: 60%;;}
+        }
+        .bar P{
+            font-size: 20PX;
+            margin-bottom: auto;
+        }
+        .s3{
+            background-color: rgb(199, 122, 148);
+            padding: 20px;
+            color: white;
+            margin: 0 auto;
+            width: 90%;
+            height: 1400px;
+            position: relative;
+        }
+        .s3left{
+            width: 40%;
+        }
+        .s3right{
+            position: absolute;
+            top: -10px;
+            left: 49%;
+            width: 60%;
+        }
+        /*section2 right timeline*/
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: wheat;
+            margin-top: 5%;
+            margin-left: 15%;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: brown;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .tlcon {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 70%;
+        }
+        .tlcon::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid brown;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: -20%;
+        }
+        .right{
+            left: 50%;
+        }
+        .r1{
+            margin-top: -80%;
+        }
+        .l2{
+            margin-top: -20%;
+        }   
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color:rgba(180, 78, 78, 0.534);
+            position: relative;
+            border-radius: 6px;
+        }
+        @media screen and (max-width: 600px) {
+      /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+            
+            /* Full-width tlcons */
+            .tlcon {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            /* Make sure that all arrows are pointing leftwards */
+            .tlcon::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            /* Make all right tlcons behave like the left ones */
+                .right {
+                left: 0%;
+            }
+        }
+        .g11{
+            width: 95%;
+        }
+        .g1{
+            width: 79.2px;
+            height: 110.88px;
+        }
+        .education{
+            margin-left: 10px;
+            margin-top: 65px;
+        }
+        .education h3{
+            padding: 10px;
+            background-color: rgba(236, 134, 168, 0.733);;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .bt{
+            width: 70%;
+            margin-top: 50px;
+        }
+        .accordion {
+            background-color:rgba(165, 42, 42, 0.384);
+            color: white;
+            cursor: pointer;
+            width: 90%;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc; 
+        }
+
+        .panel {
+            padding: 0 18px;
+            width: 90%;
+            display: none;
+            background-color:  rgba(165, 42, 42, 0.384);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .ct{
+            margin-top: 10%;
+        }
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .row {
+            margin: 8px -16px;
+        }
+
+            /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+            padding: 8px;
+        }
+
+            /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+            /* Clear floats after rows */ 
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+            /* Content */
+        .s3c {
+            background-color: rgb(236, 134, 168);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+            /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+        .pj{
+            width: 600px;
+            border: rgb(236, 134, 168) 5px solid;
+            border-radius: 10px;
+        }
+        .footer {
+        background-color: rgb(226, 159, 182);
+        height: 70px;
+        overflow: hidden;
+        color: #FFFFFF;
+        text-align: center;
+        }
+        .ft {
+        text-align: center;
+        margin-top: 11px;
+        font-size: 10px;
+        }
+        .ftx {
+        margin: 0px auto;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        }
+        /*頁尾*/
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+        <div class="d1" id="hd1"><img class="dp1" src="photo/selfie.jpg" alt="照片">
+            <div class="d3">
+                <p class="quote"><i>"Cherish everything you have."</i></p>
+                <p class="quote"><i>"Everything will be alright."</i></p>
+            </div>
+        </div>
+        <div class="d1" id="hd2">
+            <div class="d2">
+                <h1>吳珮雅</h1>
+                <h2>Rebecca Wu</h2>
+                <h3>中原大學 企業管理學系</h3>
+                <p>
+                    2000.05.19 金牛座 <br>
+                    <img src="icon/placeholder.png" style="width: 20px; height: 20px;"> Taoyuan City <br>
+                </p>
+                <div class="dicon">
+                    <a href="https://www.instagram.com/ccarebe_3/" target="blank">
+                    <div class="instagram">
+                        <div class="ig-link">
+                            <img class="icon" src="icon/instagram.png" alt="素材">
+                        </div>
+                        <div class="ig-text">
+                           <p>ccarebe_3</p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="https://www.facebook.com/rebecca.wu.161214/" target="blank">
+                    <div class="facebook">
+                        <div class="fb-link">
+                            <img class="icon" src="icon/facebook.png" alt="素材">
+                        </div>
+                        <div class="fb-text">
+                            <p>Rebecca Wu</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <section>
+        <div class="s1">
+                <div class="ttext">
+                    <div class="text">
+                        <h1>專業技能 SKILL</h1>
+                    </div>
+                </div>
+                <div class="s1con">
+                    <!--第一個圓-->
+                    <a class="tags" ishow="從國中開始學習吉他,高中時也曾為音樂課作業自己創作過歌曲">
+                    <div class="card">  
+                        <div class="box">
+                            <div class="cir">
+                                <svg> <!--圓形容器-->
+                                    <circle cx="60" cy="60" r="60"></circle> <!--圓-->
+                                    <circle cx="60" cy="60" r="60"></circle> <!--進度條圓-->
+                                </svg>
+                                <div class="word">
+                                    <h2>吉他</h2> <!--圓內文字-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!--第二個圓-->
+                    <a class="tags" ishow="從國中開始學習爵士鼓,高中時曾徵選進熱音社擔任鼓手">
+                    <div class="card">
+                        <div class="box">
+                            <div class="cir">
+                                <svg>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                </svg>
+                                <div class="word">
+                                    <h2>爵士鼓</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!--第三個圓-->
+                    <a class="tags" ishow="從國小開始練過八年的跆拳道，而我也擁有跆拳道黑帶二段的段位">
+                    <div class="card">
+                        <div class="box">
+                            <div class="cir">
+                                <svg>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                </svg>
+                                <div class="word">
+                                    <h2>跆拳道</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!--第四個圓-->
+                    <a class="tags" ishow="我平常很喜歡拍照，包括拍攝人物及風景，也有多次拍攝微電影、廣告及vlog的經驗">
+                    <div class="card">
+                        <div class="box">
+                            <div class="cir">
+                                <svg>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                </svg>
+                                <div class="word">
+                                    <h2>攝影</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!--第五個圓-->
+                    <a class="tags" ishow="我從小就對於音樂剪輯有比較多的接觸，也曾有多次影片剪輯的經驗">
+                    <div class="card">
+                        <div class="box">
+                            <div class="cir">
+                                <svg>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                </svg>
+                                <div class="word">
+                                    <h2>剪輯</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!--第六個圓-->
+                    <a class="tags" ishow="因為我的科系有較多的報告，所以對於ppt簡報的製作很熟悉">
+                    <div class="card">
+                        <div class="box">
+                            <div class="cir">
+                                <svg>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                    <circle cx="60" cy="60" r="60"></circle>
+                                </svg>
+                                <div class="word">
+                                    <h2>PPT</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div class="s2">
+            <div class="s2left">
+                <div class="text">
+                    <h1>程式技能<br>PROGRAMMING SKILL</h1>
+                </div>
+                <div class="bt">
+                    <div class="bar">
+                        <p><i><b>C#</b></i></p>
+                        <div class="skills c"></div>
+                    </div>
+                    <div class="bar">
+                        <p><i><b>Java</b></i></p>
+                        <div class="skills j"></div>
+                    </div>
+                    <div class="bar">
+                        <p><i><b>Python</b></i></p>
+                        <div class="skills p"></div>
+                    </div>
+                    <div class="bar">
+                        <p><i><b>Html / CSS</b></i></p>
+                        <div class="skills h"></div>
+                    </div>
+                    <div class="bar">
+                        <p><i><b>R</b></i></p>
+                        <div class="skills r"></div>
+                    </div>
+                </div>
+            </div>
+                <!--左半部-->
+            <div class="s2center">
+                <div class="text">
+                    <h1>工作經歷<br>WORK EXPERIENCE</h1>
+                </div>
+                <div class="ct">
+                    <button class="accordion"><h3>補習班助教 | 大一 ~ 大二</h3></button>
+                    <div class="panel">
+                    <p>主要工作內容就是監考、改考卷、訂正考卷作業，有時候也會幫忙帶低年級的小朋友做活動，因為我本身很喜歡小朋友，所以只要每次去上班我都會覺得很開心。</p>
+                    </div>
+                    <button class="accordion"><h3>推廣教育處暑期工讀生 | 大二暑假</h3></button>
+                    <div class="panel">
+                    <p>我的工作內容有幫營隊的小朋友點名、拍照等，還有擔任課程的隨班助教，這是我第一次在學校工讀，我覺得學到很多也收穫很多。</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+                }
+            </script>
+            <!--中間-->
+            <div class="s2right">
+                <div class="text">
+                    <h1>學歷 EDUCATION</h1>
+                </div>
+                <div class="education">
+                    <a href="http://www.taps.tyc.edu.tw/" target="blank"><h3>國小 | 桃園市立東安國小</h3></a>
+                    <a href="http://www.tajh.tyc.edu.tw/index.php" target="blank"><h3>國中 | 桃園市立東安國中</h3></a>
+                    <a href="https://www.nlhs.tyc.edu.tw/home" target="blank"><h3>高中 | 國立內壢高中</h3></a>
+                    <a href="https://www1.cycu.edu.tw/" target="blank"><h3>大學 | 私立中原大學</h3></a>
+                </div>
+            </div>
+            <!--右半部-->
+        </div>
+    </section>
+    <section>
+        <div class="s3">
+            <div class="s3left">
+                <div class="text">
+                    <h1>獲獎經歷<br>AWARD EXPERIENCE</h1>
+                </div>
+                <div class="timeline">
+                    <div class="tlcon left">
+                      <div class="content">
+                        <h2>大一上</h2>
+                        <p>成語接龍創意書法比賽:佳作</p>
+                        <img class="g11" src="photo/grade1/IMG_0013.jpg" alt="獎狀">
+                        <p>書卷獎<br>
+                            學期成績優異獎:第三名<br>
+                            專業學科優異獎:<br>
+                            經濟學(一)、會計學(一)</p>
+                        <div style="position:relative;">
+                            <img class="g1" src="photo/grade1/IMG_0005.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0012.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0007.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0006.jpg" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tlcon right r1">
+                      <div class="content">
+                        <h2>大一下</h2>
+                        <p>書卷獎<br>
+                            學期成績優異獎:第一名<br>
+                            專業學科優異獎:<br>
+                            經濟學(一)、會計學(一)</p>
+                        <div style="position:relative;">
+                            <img class="g1" src="photo/grade1/IMG_0010.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0011.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0009.jpg" >
+                            <img class="g1" src="photo/grade1/IMG_0008.jpg" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tlcon left l2">
+                      <div class="content">
+                        <h2>大二</h2>
+                        <p>書卷獎<br>
+                            學期成績優異獎:第二名<br>
+                            專業學科優異獎:<br>
+                            統計學(一)<br>NET程式設計</p>
+                        <div style="position:relative;">
+                            <img class="g1" src="photo/grade2/IMG_0004.jpg" >
+                            <img class="g1" src="photo/grade2/IMG_0001.jpg" >
+                            <img class="g1" src="photo/grade2/IMG_0003.jpg" >
+                            <img class="g1" src="photo/grade2/IMG_0002.jpg" >
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s3right">
+                <div class="project">
+                    <div class="text">
+                        <h1>期中專案<br>PROJECT</h1>
+                    </div>
+                    <div>
+                        <img class="pj" src="photo/pj.jpg" alt="圖片">
+                        <img class="pj" src="photo/pj1.jpg" alt="圖片">
+                    </div>
+                </div>
+                <div class="text">
+                    <h1>生活紀錄<br>LIFE RECORD</h1>
+                </div>
+                <div class="main">
+                    <div class="row">
+                        <div class="column">
+                        <div class="s3c">
+                            <img class="p1" src="photo/1.jpg" title="IN" style="width:100%">
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="s3c">
+                        <img class="p2" src="photo/2.jpg" alt="Lights" style="width:100%">
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="s3c">
+                        <img class="p3" src="photo/3.jpg" alt="Nature" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="row">
+                        <div class="column">
+                        <div class="s3c">
+                            <img class="p4" src="photo/4.jpg" alt="Mountains" style="width:100%">
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="s3c">
+                        <img class="p5" src="photo/5.jpg" alt="Lights" style="width:100%">
+                        </div>
+                        </div>
+
+                        <div class="column">
+                        <div class="s3c">
+                        <img class="p6" src="photo/6.jpg" title="IN" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="ft">
+            <div class="ftx">
+            @WU PEI YA
+            </div>
+            Tel：+886-981369169 │ E-mail：a3737441@gmail.com
+        </div>
+        <!--頁尾-->
+    </footer>
+</body>
+</html>
