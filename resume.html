@@ -9,57 +9,67 @@
             box-sizing: border-box;
         }
         body{
-            background-color: rgb(226, 159, 182);
+            background-image: url(photo/bg6.jpg);
+            background-color: rgb(192, 59, 103);
             overflow-x: hidden;
         }
         .header{
-            background-color: palevioletred;
+            background-color: rgb(216, 112, 147);
+            background-image: url(photo/bg7.jpg);
             padding: 20px;
-            color: white;
+            color: rgb(173, 84, 84);
             margin: 0 auto;
             height: 470px;
             width: 90%;
             position: relative;
-            border: rgba(226, 112, 150, 0.815) 10px solid;
+            border: 5px solid rgb(173, 84, 84);
         }
         .ttext{
-            background-color: rgb(199, 122, 148);
+            background-color: rgba(255, 255, 255, 0.589);
+            /*background-image: url(photo/bg7.jpg);*/
             padding: 20px;
-            color: white;
+            color: rgb(173, 84, 84);
             margin: 0 auto;
             width: 90%;
             z-index: -1;
+            border-right: 5px solid rgb(173, 84, 84);
+            border-left: 5px solid rgb(173, 84, 84);
         }
         .s2{
-            background-color: palevioletred;
+            background-color: rgba(255, 255, 255, 0.589);
+            /*background-image: url(photo/bg7.jpg);*/
             padding: 20px;
-            color: white;
+            color: rgb(173, 84, 84);
             margin: 0 auto;
             width: 90%;
-            height: 500PX;
+            height: 510PX;
             position: relative;
+            border-right: 5px solid rgb(173, 84, 84);
+            border-left: 5px solid rgb(173, 84, 84);
         }
         .dp1{
-            width: 270px;
-            height: 270px;
-            border-radius: 50ch;
-            transition: all .5s ease-out;
-            opacity: 0.95;
-        }
-        .dp1:hover{
             width: 300px;
             height: 300px;
+            border-radius: 50ch;
+            transition: all .5s ease-out;
+            opacity: 0.9;
+        }
+        .dp1:hover{
+            width: 320px;
+            height: 320px;
             opacity: 1;
         }
         .quote{
             font-size: 35px;
+            color: rgb(173, 84, 84);
         }
         .d3{
             margin-top: 30px;
-            background-color: rgb(236, 134, 168);
+            /*background-color: rgb(236, 134, 168);*/
+            background-image: url(photo/bg1.jpg);
             padding: 1px 30px;
             border-radius: 10px;
-            border: 5px solid rgba(226, 112, 150, 0.815);
+            border: 5px solid rgb(173, 84, 84);
         }
         .d1{  
             position: absolute;
@@ -86,7 +96,7 @@
             position: relative;
             width: 160px;
             height: 45px;
-            background-color: rgb(236, 134, 168);
+            background-color: rgba(173, 84, 84, 0.39);
             border-radius: 50px;
         }
         .ig-link,.fb-link{
@@ -114,14 +124,20 @@
         a:hover{
             color: rgb(209, 77, 121);
         }
+        .education a:hover{
+            color: brown;
+        }
         /*header*/
         .text{
             margin-top: 10%;
             text-align: center;
             width: 300px;
-            background-color: rgb(236, 134, 168);
-            border-radius: 10px;
+            /*background-color: rgb(236, 134, 168);*/
+            background-image: url(photo/bg1.jpg);
             font-size: 15px;
+        }
+        .text h1{
+            border: 3px solid rgb(173, 84, 84);
         }
         .s2text{
             text-align: center;
@@ -138,6 +154,9 @@
             justify-content:space-around;
             margin: 0 auto;
             background-color:rgb(218, 124, 155);
+            background-image: url(photo/bg7.jpg);
+            border: 6px solid rgb(173, 84, 84);
+            /*專業技能欄*/
         }
         .s1con .card{
             position: relative;
@@ -153,6 +172,7 @@
             width: 130px;
             border-radius:50% ;
             background:  rgb(236, 134, 168);
+            background-image: url(photo/bg4.jpg);
         }
         .cir .word{
             position: absolute;
@@ -168,11 +188,11 @@
         .cir .word h2 {
             font-weight: 700;
             font-size: 30px;
-            color: #777;
+            color: rgb(173, 84, 84);
             transition: 0.5s;
         }
         .card:hover .cir .word h2{ 
-            color: #fff;
+            color: #777;
             font-size: 40px;
         }
         svg{
@@ -248,7 +268,7 @@
             font-size: 20px;
         }
         .tags:hover:after {
-            background: rgb(230, 97, 137);
+            background: rgb(173, 84, 84);
             border-radius: 10px;
             color: #fff;
             content: attr(ishow);
@@ -259,7 +279,7 @@
             z-index: 1000;
             width: 200px;
             height: auto;
-            opacity: 0.6;
+            opacity: 0.8;
         }
         .s2left{
             position: absolute;
@@ -335,13 +355,15 @@
             margin-bottom: auto;
         }
         .s3{
-            background-color: rgb(199, 122, 148);
+            background-color: rgba(255, 255, 255, 0.589);
+           /*background-image: url(photo/bg7.jpg);*/
             padding: 20px;
-            color: white;
+            color: rgb(173, 84, 84);
             margin: 0 auto;
             width: 90%;
-            height: 1400px;
+            height: 1500px;
             position: relative;
+            border: 6px solid rgb(173, 84, 84);
         }
         .s3left{
             width: 40%;
@@ -352,12 +374,12 @@
             left: 49%;
             width: 60%;
         }
-        /*section2 right timeline*/
+        /*section3 right timeline*/
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            color: wheat;
+            color: rgb(173, 84, 84);
             margin-top: 5%;
             margin-left: 15%;
         }
@@ -365,7 +387,7 @@
             content: '';
             position: absolute;
             width: 6px;
-            background-color: brown;
+            background-color: rgb(173, 84, 84);
             top: 0;
             bottom: 0;
             left: 50%;
@@ -375,7 +397,7 @@
             padding: 10px 40px;
             position: relative;
             background-color: inherit;
-            width: 60%;
+            width: 70%;
         }
         .tlcon::after {
             content: '';
@@ -384,13 +406,14 @@
             height: 25px;
             right: -17px;
             background-color: white;
-            border: 4px solid brown;
+            background-image: url(photo/bg4.jpg);
+            border: 4px solid rgb(173, 84, 84);
             top: 15px;
             border-radius: 50%;
             z-index: 1;
         }
         .left {
-            left: -10%;
+            left: -20%;
         }
         .right{
             left: 50%;
@@ -399,7 +422,7 @@
             margin-top: -80%;
         }
         .l2{
-            margin-top: -3%;
+            margin-top: -20%;
         }   
         .left::before {
             content: " ";
@@ -409,9 +432,9 @@
             width: 0;
             z-index: 1;
             right: 30px;
-            border: medium solid white;
+            border: medium solid rgb(173, 84, 84);
             border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
+            border-color: transparent transparent transparent rgb(173, 84, 84);
         }
         .right::before {
             content: " ";
@@ -421,18 +444,20 @@
             width: 0;
             z-index: 1;
             left: 30px;
-            border: medium solid white;
+            border: medium solid rgb(173, 84, 84);
             border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
+            border-color: transparent rgb(173, 84, 84) transparent transparent;
         }
         .right::after {
             left: -16px;
         }
         .content {
             padding: 20px 30px;
-            background-color:rgba(180, 78, 78, 0.534);
+            background-color:brown;
+            background-image: url(photo/bg6.jpg);
             position: relative;
             border-radius: 6px;
+            border: 3px solid rgb(173, 84, 84);
         }
         @media screen and (max-width: 600px) {
       /* Place the timelime to the left */
@@ -478,7 +503,7 @@
         }
         .education h3{
             padding: 10px;
-            background-color: rgba(236, 134, 168, 0.733);;
+            background-color:rgba(173, 84, 84, 0.5);
             width: 300px;
             border-radius: 10px;
         }
@@ -487,7 +512,7 @@
             margin-top: 50px;
         }
         .accordion {
-            background-color:rgba(165, 42, 42, 0.384);
+            background-color:rgba(173, 84, 84, 0.5);
             color: white;
             cursor: pointer;
             width: 90%;
@@ -500,16 +525,18 @@
         }
 
         .active, .accordion:hover {
-            background-color: #ccc; 
+            background-color:rgba(173, 84, 84, 0.808);
         }
 
         .panel {
-            padding: 0 18px;
+            padding: 0 5px;
             width: 90%;
             display: none;
-            background-color:  rgba(165, 42, 42, 0.384);
+            background-color:  rgba(173, 84, 84, 0.5);
+            background-image: url(photo/bg6.jpg);
             overflow: hidden;
             border-radius: 10px;
+            border: 2px solid rgba(173, 84, 84, 0.808);
         }
         .ct{
             margin-top: 10%;
@@ -543,9 +570,13 @@
 
             /* Content */
         .s3c {
-            background-color: rgb(236, 134, 168);
+            background-color: white;
+            background-image: url(photo/bg4.jpg);
             padding: 10px;
-            border-radius: 10px;
+            position: relative;
+        }
+        .s3c:hover .record-text{
+            opacity: 1;
         }
 
             /* Responsive layout - makes a two column-layout instead of four columns */
@@ -562,27 +593,66 @@
             }
         }
         .pj{
+            position: relative;
+        }
+        .pj img{
+            text-align: center;
+            border: 8px solid rgba(173, 84, 84, 0.5);
+            border-radius: 2px;
+            position: relative;
+        }
+        .pjt{
             width: 600px;
-            border: rgb(236, 134, 168) 5px solid;
-            border-radius: 10px;
+        }
+        .project-text {
+            opacity: 0;
+            position: absolute;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.65);
+            top: 6px;
+            left: 6px;
+            width: 72%;
+            height: 95%;
+            font-size: 30px;
+            text-align: center;
+            color: rgb(173, 84, 84);
+            padding-top: 80px;
+        }
+        .pj:hover .project-text{
+            opacity: 1;
+        }
+        .record-text {
+            opacity: 0;
+            position: absolute;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.445);
+            top: 10px;
+            width: 90%;
+            height: 85%;
+            text-align: center;
+            color: rgb(85, 39, 39);
+            padding-top: 30px;
+            border: 3px solid rgba(173, 84, 84, 0.7);
         }
         .footer {
-        background-color: rgb(226, 159, 182);
-        height: 70px;
-        overflow: hidden;
-        color: #FFFFFF;
-        text-align: center;
+            width: 90%;
+            background-color: rgb(173, 84, 84);
+            margin: 0 auto;
+            height: 70px;
+            overflow: hidden;
+            color: #FFFFFF;
+            text-align: center;
         }
         .ft {
-        text-align: center;
-        margin-top: 11px;
-        font-size: 10px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 10px;
         }
         .ftx {
-        margin: 0px auto;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        font-size: 15px;
+            margin: 0px auto;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 15px;
         }
         /*頁尾*/
     </style>
@@ -875,9 +945,20 @@
                     <div class="text">
                         <h1>期中專案<br>PROJECT</h1>
                     </div>
-                    <div>
-                        <img class="pj" src="photo/pj.jpg" alt="圖片">
-                        <img class="pj" src="photo/pj1.jpg" alt="圖片">
+                    <div class="pjt">
+                        <h3>我們主要針對學校良好的學習環境與藝文活動空間來做介紹，<br>分別是 - 圖書館、風雅頌、樂學園、瑞麗堂及秀德廳。</h3>
+                    </div>
+                    <div class="pj">
+                        <img src="photo/pj.jpg" alt="圖片" style="width: 590px;height: 289px;">
+                        <a href="https://yanyou01.github.io/cycu/chungyuan.html" target="blank">
+                        <div class="project-text">
+                            <h1>Click</h1>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="pjt">
+                        <h3>We mainly introduce the school’s good learning environment and arts activities space.
+                            Welcome to click and look over what we do!!!</h3>
                     </div>
                 </div>
                 <div class="text">
@@ -887,19 +968,29 @@
                     <div class="row">
                         <div class="column">
                         <div class="s3c">
-                            <img class="p1" src="photo/1.jpg" title="IN" style="width:100%">
+                            <img class="p1" src="photo/1.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Hualien,Taiwan</h4>
+                            </div>
                         </div>
                         </div>
 
                         <div class="column">
                         <div class="s3c">
-                        <img class="p2" src="photo/2.jpg" alt="Lights" style="width:100%">
+                            <img class="p2" src="photo/2.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Taoyuan,Taiwan</h4>
+                            </div>
                         </div>
                         </div>
 
                         <div class="column">
                         <div class="s3c">
-                        <img class="p3" src="photo/3.jpg" alt="Nature" style="width:100%">
+                            <img class="p3" src="photo/3.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Tainan,Taiwan</h4>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -907,19 +998,29 @@
                     <div class="row">
                         <div class="column">
                         <div class="s3c">
-                            <img class="p4" src="photo/4.jpg" alt="Mountains" style="width:100%">
+                            <img class="p4" src="photo/4.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Taoyuan,Taiwan</h4>
+                            </div>
                         </div>
                         </div>
 
                         <div class="column">
                         <div class="s3c">
-                        <img class="p5" src="photo/5.jpg" alt="Lights" style="width:100%">
+                            <img class="p5" src="photo/5.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Yilan,Taiwan</h4>
+                            </div>
                         </div>
                         </div>
 
                         <div class="column">
                         <div class="s3c">
-                        <img class="p6" src="photo/6.jpg" title="IN" style="width:100%">
+                            <img class="p6" src="photo/6.jpg" style="width:100%">
+                            <div class="record-text">
+                                <h4>In Liuqiu,Taiwan</h4>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
